@@ -13,7 +13,17 @@
 
 
  var commonCharacters = function(string1, string2) {
-    // TODO: Your code here!
+    var temp = [];
+    var result = "";
+    if(string1 === string2){
+      result = string1;
+    }else if(string1.length === 0 || string2.length === 0){
+      result = "";
+    }else{
+      for(var i = 0; i<string1.length;i++){
+        for(var j = 0; j)
+      }
+    }
     
   }
   

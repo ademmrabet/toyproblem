@@ -20,9 +20,23 @@ In other words, find all the possible combinations of coins that sum to a given 
 // HELPERS
 var coins = [1, 2, 5, 10, 20, 50, 100, 200];
 
-function coinSums(total) {
-  // your code here...
-
-
-
-}
+function coinSums(total){
+  var count = 0;
+  var coins = [1,2,5,10,20,50,100,200];
+  function changer(index, value){
+    var currentCoin = coins[index];
+    if (index === 0){
+      if(value % currentCoin === 0){
+        count++;
+      }
+      return;
+    }
+    while(value >= 0){
+      changer(index-1, value);
+      value -= currentCoin
+    }
+  }
+  changer(coins.length-1, total);
+  return count;
+};
+coinSums(2);
