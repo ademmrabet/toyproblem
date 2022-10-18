@@ -17,7 +17,7 @@
     var result = "";
     if(string1 === string2){
       result = string1;
-    }else if(string1.length === 0 || string2.length === 0){
+    }else if(string1.length === 0 || string2.length === 0){jk
       result = "";
     }else{
       for(var i = 0; i<string1.length;i++){
